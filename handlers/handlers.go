@@ -9,6 +9,11 @@ import (
 )
 
 func GetEvents(ctx *gin.Context) {
-	result := controllers.Controller()
-	ctx.String(http.StatusOK, result)
+	result := controllers.GetEvents()
+	ctx.JSON(http.StatusOK, result)
+}
+
+func GetMembers(ctx *gin.Context) {
+	result := controllers.GetMembers()
+	ctx.JSON(http.StatusOK, result)
 }

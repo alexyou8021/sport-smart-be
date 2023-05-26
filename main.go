@@ -27,8 +27,8 @@ func main() {
 	router.GET("/events", func(ctx *gin.Context) {
 		handlers.GetEvents(ctx)
 	})
-	router.GET("/test", func(ctx *gin.Context) {
-		ctx.String(http.StatusOK, "test")
+	router.GET("/members", func(ctx *gin.Context) {
+		handlers.GetMembers(ctx)
 	})
 
 	router.Run(":" + port)
